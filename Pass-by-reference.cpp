@@ -10,9 +10,8 @@ int main()
     getNumbers(firstNum, secondNum);
     swapValues(firstNum, secondNum);
     showResults(firstNum, secondNum);
-    return 0;   
+    return 0;
 }
-
 void getNumbers(int& input1, int& input2)
 {
     std::cout << "Enter two integers: ";
