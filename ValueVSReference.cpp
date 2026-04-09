@@ -6,8 +6,8 @@ int main()
 {
     int n1{1}, n2{2};
     doStuff(n1, n2);
-    std::cout << n1 << "n1 after function call = " << std::endl;
-    std::cout << n2 << "n2 after function call = " << std::endl;
+    std::cout << "n1 after function call = " << n1 << std::endl;
+    std::cout << "n2 after function call = " << n2 << std::endl;
     return 0;  
 }
 
