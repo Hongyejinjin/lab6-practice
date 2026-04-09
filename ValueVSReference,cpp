@@ -1,0 +1,20 @@
+#include <iostream>
+
+void doStuff(int par1Value, int& par2Ref);
+
+int main()
+{
+    int n1{1}, n2{2};
+    doStuff(n1, n2);
+    std::cout << n1 << "n1 after function call = " << std::endl;
+    std::cout << n2 << "n2 after function call = " << std::endl;
+    return 0;  
+}
+
+void doStuff(int par1Value, int& par2Ref)
+{
+    par1Value = 111;
+    std::cout << "par1Value in function = " << par1Value << std::endl;
+    par2Ref = 222;
+    std::cout << "par2Ref in function = " << par2Ref << std::endl;
+}
