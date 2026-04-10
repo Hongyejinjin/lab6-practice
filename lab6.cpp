@@ -9,8 +9,15 @@
 // 1-3. 리턴 없음, 매개변수는 const int형 참조, char형 참조 (총 2개), int형 매개변수 값 (90이상,80이상,70이상,60이상,그외)에 따라
 // char형에 ('A','B','C','D','F')값을 할당하는 함수 선언, int형 매개변수를 const한 이유를 주석으로 작성
 // 1-4. 리턴 없음, 매개변수는 const int형 참조, const char형 참조 (총 2개), 기본값은 순서대로 100, 'A', 터미널로 매개변수 출력
-int getNumber();
-int getNumber(int& n1);
+int inputInteger();
+
+int inputInteger(int& n1); //오버로딩
+
+bool isValidScore(int);
+
+void credit1(const int n1, char n2);
+
+void credit2(const int n1, const char n2);
 
 int main() //2. main
 {
@@ -22,13 +29,15 @@ std::cout << "01 Hong ye jin 2649058" << std::endl;
 // 1-1함수호출시 매개변수의 주소를 출력하게 구현했는데 출력된 주소가 main의 점수를 나타내는 int형 변수의 주소와 같은 이유는?
 int score{};
 std::cout << &score << std::endl;
-getnumber(int n1);
+inputInteger(score); // 매개변수는 int형 참조이기 때문이다.
+
 
 // 2-2. 1-2함수(인자는 2-1변수)의 리턴값이 false면 프로그램 종료 (사전정의함수인 exit함수 사용),
 // 1-2함수호출시 매개변수의 주소를 출력하게 구현했는데 출력된 주소가 main의 점수를 나타내는 int형 변수의 주소와 다른 이유는?
 
 // 2-3. 성적을 나타내는 char형 변수를 선언하고, 1-3함수호출(인자는 점수를 나타내는 int형 변수, 성적을 나타내는 char형 변수)
-
+char yourscore{};
+void credit1(score, yourscore);
 // 2-4. 1-4함수를 2번 호출
 // 호출1. 인자로 점수를 나타내는 int형 변수, 성적을 나타내는 char형 변수를 넣어 호출
 // 호출2. 인자를 넣지 않고 호출, 인자를 넣지 않아도 되는 이유는?
